@@ -17,9 +17,11 @@ bool zeroSum(int arr[], int n){
         if(h.find(sum)!=h.end()){
             return true;
         }
-        else{
-            h.insert(sum);
+        if(sum==0){
+            return true;
         }
+        h.insert(sum);
+        
     }
     return false;
 }
